@@ -62,6 +62,7 @@ public String uploadFile(@RequestParam("file") MultipartFile file){
         List<String> chunks= textSplitter.splitText(text);
 
         for(String chunk: chunks){
+ 
             List<Double> embedding = embeddingService.getEmbedding(chunk);
             DocumentChunk doc=documentRepository.save(new DocumentChunk(chunk, file.getOriginalFilename()));
             doc.setEmbedding(embedding);

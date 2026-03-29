@@ -108,6 +108,20 @@ mvn spring-boot:run
 
 ---
 
+## API Documentation
+
+Swagger UI is available after running the application:
+
+http://localhost:8080/swagger-ui.html
+
+You can test all APIs directly from the browser.
+
+Steps:
+1. Call /auth/login to get JWT token
+2. Click "Authorize" in Swagger
+3. Paste token as: Bearer <your_token>
+4. Access secured APIs like upload, search, ask
+
 ## Author
 
 Rahul Dev
